@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:52:44 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/25 20:13:28 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/01/26 23:51:56 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	node_index(t_stack **a)
 	tmp = *a;
 	while (tmp)
 	{
-		tmp->X = j;
+		tmp->x = j;
 		j++;
 		tmp = tmp->next;
 	}

@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:05:34 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/25 20:11:48 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/01/26 23:51:26 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_middle_sort(t_stack **a, t_stack **b)
 		min_index = min_value(*a);
 		while (min_index != 0)
 		{
-			if (min_index < len / 2)
+			if (min_index <= len / 2)
 				ft_ra_rotate(a, 0);
 			else
 				ft_reverse_rot_a(a, 0);
@@ -39,7 +39,6 @@ void	ft_middle_sort(t_stack **a, t_stack **b)
 	ft_push_a(a, b);
 	ft_push_a(a, b);
 }
-
 
 void	ft_large_sort(t_stack **a, t_stack **b)
 {
@@ -56,9 +55,9 @@ void	ft_large_sort(t_stack **a, t_stack **b)
 	while (ft_lenstack(*b) != 0)
 		ft_combination(a, b);
 	least = min_node(*a);
-	while (least->X != 0)
+	while (least->x != 0)
 	{
-		if (least->X < ft_lenstack(*a) / 2)
+		if (least->x < ft_lenstack(*a) / 2)
 			ft_ra_rotate(a, 0);
 		else
 			ft_reverse_rot_a(a, 0);
@@ -75,7 +74,7 @@ void	ft_best_case(t_stack **a, t_stack **b)
 	{
 		while (*a != tp->target)
 		{
-			if (tp->target->X < ft_lenstack(*a) / 2)
+			if (tp->target->x < ft_lenstack(*a) / 2)
 				ft_ra_rotate(a, 0);
 			else
 				ft_reverse_rot_a(a, 0);

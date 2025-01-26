@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 23:10:36 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/24 23:25:03 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/01/26 23:54:06 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	ft_sa_swap(t_stack **a, int flag)
 	tmp = (*a)->value;
 	(*a)->value = (*a)->next->value;
 	(*a)->next->value = tmp;
-	tmp = (*a)->X;
-	(*a)->X = (*a)->next->X;
-	(*a)->next->X = tmp;
+	tmp = (*a)->x;
+	(*a)->x = (*a)->next->x;
+	(*a)->next->x = tmp;
 	node_index(a);
 	if (!flag)
 		ft_putstr("sa\n");
@@ -38,9 +38,9 @@ void	ft_sb_swap(t_stack **b, int flag)
 	tmp = (*b)->value;
 	(*b)->value = (*b)->next->value;
 	(*b)->next->value = tmp;
-	tmp = (*b)->X;
-	(*b)->X = (*b)->next->X;
-	(*b)->next->X = tmp;
+	tmp = (*b)->x;
+	(*b)->x = (*b)->next->x;
+	(*b)->next->x = tmp;
 	node_index(b);
 	if (!flag)
 		ft_putstr("sb\n");

@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 23:34:58 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/25 17:55:47 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/01/26 23:53:19 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	min_value(t_stack *a)
 			tmp = a;
 		a = a->next;
 	}
-	return (tmp->X);
+	return (tmp->x);
 }
 
 void	ft_three_case(t_stack **a)

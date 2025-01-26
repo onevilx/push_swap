@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 16:20:21 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/25 20:06:31 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/01/26 23:45:57 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_reverse_rot_a(t_stack **a, int flag)
 			return (ft_putstr("rra\n"));
 	}
 	else
-		return;
+		return ;
 }
 
 void	ft_reverse_rot_b(t_stack **b, int flag)

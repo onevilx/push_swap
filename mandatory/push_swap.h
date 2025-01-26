@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 21:06:11 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/25 20:09:46 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/01/26 23:45:19 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 typedef struct s_stack
 {
-	int				X;
+	int				x;
 	int				price;
 	int				budget;
 	int				value;

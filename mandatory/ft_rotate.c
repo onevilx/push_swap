@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 23:26:53 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/25 20:10:17 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/01/26 23:52:49 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,21 +61,22 @@ void	ft_rr_rotate(t_stack **a, t_stack **b)
 
 void	ft_rotation_case(t_stack **a, t_stack **b, t_stack *tp)
 {
-	if (tp->X < ft_lenstack(*b) / 2 && tp->target->X < ft_lenstack(*a) / 2)
+	if (tp->x < ft_lenstack(*b) / 2 && tp->target->x < ft_lenstack(*a) / 2)
 	{
 		while (*a != tp->target && *b != tp)
 			ft_rr_rotate(a, b);
 	}
-	else if (tp->X >= ft_lenstack(*b) / 2 && tp->target->X >= ft_lenstack(*a) / 2)
+	else if (tp->x >= ft_lenstack(*b) / 2
+		&& tp->target->x >= ft_lenstack(*a) / 2)
 	{
 		while (*a != tp->target && *b != tp)
-			ft_rr_rotate(a, b);
+			ft_rrr_rrotate(a, b);
 	}
 	if (*b != tp)
 	{
 		while (*b != tp)
 		{
-			if (tp->X < ft_lenstack(*b) / 2)
+			if (tp->x < ft_lenstack(*b) / 2)
 				ft_rb_rotate(b, 0);
 			else
 				ft_reverse_rot_b(b, 0);

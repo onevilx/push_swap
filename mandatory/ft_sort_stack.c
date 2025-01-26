@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 23:34:55 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/25 21:44:14 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/01/26 23:53:11 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_prepare(t_stack **a, t_stack **b, int mid, int max)
 	int	len;
 
 	len = ft_lenstack(*a);
-	while (*a && len > 3)
+	while (len > 3)
 	{
 		if ((*a)->value != max)
 		{
@@ -40,11 +40,11 @@ void	ft_get_value(t_stack **a)
 	len = ft_lenstack(tmp);
 	while (tmp)
 	{
-		tmp->price = tmp->X;
-		if (tmp->X < len / 2)
-			tmp->price = tmp->X;
+		tmp->price = tmp->x;
+		if (tmp->x < len / 2)
+			tmp->price = tmp->x;
 		else
-			tmp->price = len - tmp->X;
+			tmp->price = len - tmp->x;
 		tmp = tmp->next;
 	}
 }
