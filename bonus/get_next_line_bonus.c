@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:49:01 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/29 17:07:20 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/01/30 22:34:38 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,17 +93,17 @@ char	*ft_reading(char *str, int fd)
 
 char	*get_next_line(int fd)
 {
-	static char	*str[10240];
+	static char	*str;
 	char		*result;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= 10240)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	str[fd] = ft_reading(str[fd], fd);
-	if (!str[fd])
+	str = ft_reading(str, fd);
+	if (!str)
 		return (NULL);
-	result = first_line(str[fd]);
+	result = first_line(str);
 	if (!result)
-		return (free(str[fd]), str[fd] = NULL, NULL);
-	str[fd] = last_line(str[fd]);
+		return (free(str), str = NULL, NULL);
+	str = last_line(str);
 	return (result);
 }
