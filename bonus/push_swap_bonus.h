@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 21:06:11 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/29 17:40:07 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/01/31 20:56:11 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,6 @@ void	*last_node(t_stack *a);
 void	node_index(t_stack **a);
 t_stack	*ft_lstnew(int value);
 t_stack	*min_node(t_stack *a);
-t_stack	*ft_lstlast(t_stack *lst);
 t_stack	*get_big_node(t_stack *node);
 t_stack	*ft_find_best(t_stack **stack);
 size_t	ft_strlen(const char *str);

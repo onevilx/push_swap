@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 23:15:49 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/29 17:29:44 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/01/31 20:39:27 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,6 @@ t_stack	*ft_lstnew(int value)
 	new->value = value;
 	new->next = NULL;
 	return (new);
-}
-
-t_stack	*ft_lstlast(t_stack *lst)
-{
-	t_stack	*tmp;
-
-	if (!lst)
-		return (NULL);
-	tmp = lst;
-	while (tmp->next)
-		tmp = tmp->next;
-	return (tmp);
 }
 
 void	ft_lstadd_back(t_stack **lst, t_stack *new)
