@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 21:25:54 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/29 17:28:02 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/01 21:23:12 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	ft_fill(t_stack **a, char **res)
 	while (i < size)
 	{
 		if (ft_atoi(res[i]) > INT_MAX || ft_atoi(res[i]) < INT_MIN)
-			return (ft_putstr("Error\n"), ft_free(res), exit(1));
+			return (write(2, "Error\n", 6), ft_free(res), exit(1));
 		r = (int)ft_atoi(res[i]);
 		if (i == 0)
 			first_node(a, res, r);

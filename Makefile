@@ -6,7 +6,7 @@
 #    By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/24 20:57:37 by yaboukir          #+#    #+#              #
-#    Updated: 2025/01/29 18:29:11 by yaboukir         ###   ########.fr        #
+#    Updated: 2025/02/01 21:38:13 by yaboukir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ OBJS_PUSH_SWAP_BONUS = $(SRCS_PUSH_SWAP_BONUS:.c=.o)
 CC = cc
 AR = ar r
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g
+CFLAGS = -Wall -Wextra -Werror
 INCLUDE = mandatory/push_swap.h
 INCLUDE_BONUS = bonus/push_swap_bonus.h
 NAME_PUSH_SWAP = push_swap

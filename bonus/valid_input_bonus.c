@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 18:36:37 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/29 17:29:59 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/01 20:19:04 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ char	**valid_input(char **argv)
 	str = NULL;
 	str = ft_join_args(argv, str);
 	res = ft_split(str, ' ');
+	if (!res || !*res)
+		return (NULL);
 	free(str);
 	ft_parsing(res);
 	return (res);

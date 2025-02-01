@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 21:27:50 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/29 17:29:37 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/01 20:18:41 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	main(int argc, char **argv)
 	if (argc >= 2)
 	{
 		str = valid_input(argv);
+		if (!str || !*str)
+			return (0);
 		ft_fill(&a, str);
 		ft_free(str);
 		if (a != NULL && a->next == NULL)

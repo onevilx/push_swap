@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 23:34:50 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/29 17:29:53 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/01 21:37:55 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,6 @@ int	ft_strlen2(char **str)
 
 	i = 0;
 	while (str[i])
-	{
 		i++;
-	}
 	return (i);
 }

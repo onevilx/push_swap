@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:36:05 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/29 18:16:14 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/01 21:37:18 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ void	ft_check_program(char *line, t_stack **a, t_stack **b)
 		ft_push_a(a, b, 1);
 	else if (ft_strcmp(line, "pb\n") == 0)
 		ft_push_b(a, b, 1);
+	else
+		return (write(2, "Error\n", 6), exit(1));
 }
 
 void	ft_check_gnl(t_stack **a, t_stack **b)
@@ -54,9 +56,9 @@ void	ft_check_gnl(t_stack **a, t_stack **b)
 	free(line);
 }
 
-void	ft_answer(t_stack **a)
+void	ft_answer(t_stack **a, t_stack **b)
 {
-	if (ft_sorted(a) == 0)
+	if (ft_sorted(a) == 0 && (!b || !*b))
 		ft_putstr("OK\n");
 	else
 		ft_putstr("KO\n");
@@ -71,9 +73,11 @@ int	main(int argc, char *argv[])
 
 	a = NULL;
 	b = NULL;
-	if (argc >= 2)
+	if (argc > 1)
 	{
 		str = valid_input(argv);
+		if (!str || !*str)
+			return (0);
 		ft_fill(&a, str);
 		ft_free(str);
 		if (a != NULL && a->next == NULL)
@@ -81,7 +85,7 @@ int	main(int argc, char *argv[])
 		if (!ft_sorted(&a))
 			return (ft_lstclear(&a), 0);
 		ft_check_gnl(&a, &b);
-		ft_answer(&a);
+		ft_answer(&a, &b);
 	}
 	else
 		return (0);

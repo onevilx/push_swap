@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 21:18:25 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/28 20:46:47 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/01 21:24:01 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_atoi(const char *str)
 		if ((sign && result > INT_MAX)
 			|| (sign < 1 && result > ((long)INT_MAX + 1)))
 		{
-			ft_putstr("Error\n");
+			write(2, "Error\n", 6);
 			exit(1);
 		}
 	}

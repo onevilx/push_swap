@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 21:06:11 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/31 20:56:11 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/01 21:36:15 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <limits.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 7
+#  define BUFFER_SIZE 1
 # endif
 
 typedef struct s_stack
