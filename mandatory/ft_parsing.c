@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 21:26:28 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/02/01 21:24:30 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/02 14:40:50 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,24 +21,21 @@ int	ft_is_valid_digit(char **args)
 	while (args[i])
 	{
 		j = 0;
+		if (args[i][j] == '-' || args[i][j] == '+')
+			j++;
+		if (!args[i][j])
+			return (0);
 		while (args[i][j])
 		{
 			if (!is_digit(args[i][j]))
-			{
-				if (args[i][j] == '-' || args[i][j] == '+')
-				{
-					if (j - 1 && args[i][j] && !is_digit(args[i][j + 1]))
-						return (0);
-				}
-				else
-					return (0);
-			}
+				return (0);
 			j++;
 		}
 		i++;
 	}
 	return (1);
 }
+
 
 int	ft_isspace(char **args)
 {
