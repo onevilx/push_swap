@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:36:05 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/02/02 15:13:37 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/02 17:58:47 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,13 @@ void	ft_check_gnl(t_stack **a, t_stack **b)
 
 void	ft_answer(t_stack **a, t_stack **b)
 {
-	if (ft_sorted(a) == 0 && (!b || !*b))
+	if ((!b || !*b) && ft_sorted(a) == 0)
 		ft_putstr("OK\n");
 	else
 		ft_putstr("KO\n");
 	ft_lstclear(a);
+	if (*b)
+		ft_lstclear(b);
 }
 
 int	main(int argc, char *argv[])
