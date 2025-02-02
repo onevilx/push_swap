@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:49:01 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/02/02 15:16:57 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/02 16:50:10 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,13 +68,11 @@ char	*ft_reading(char *str, int fd)
 {
 	char	*buffer;
 	int		bytes;
+	char	*tmp;
 
-	buffer = malloc((size_t)BUFFER_SIZE + 1);
+	buffer = malloc(BUFFER_SIZE + 1);
 	if (!buffer)
-	{
-		free(str);
-		return (NULL);
-	}
+		return (free(str), NULL);
 	bytes = 1;
 	while (bytes > 0 && ft_strchr(str, '\n') == -1)
 	{
@@ -84,11 +82,14 @@ char	*ft_reading(char *str, int fd)
 		if (bytes == 0)
 			break ;
 		buffer[bytes] = '\0';
+		tmp = str;
 		str = ft_strjoin(str, buffer);
+		free(tmp);
 		if (!str)
 			return (free(buffer), NULL);
 	}
-	return (free(buffer), str);
+	free(buffer);
+	return (str);
 }
 
 char	*get_next_line(int fd)

@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 21:26:28 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/02/02 14:40:50 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/02 16:50:19 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int	ft_is_valid_digit(char **args)
 	}
 	return (1);
 }
-
 
 int	ft_isspace(char **args)
 {
