@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:36:05 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/02/01 21:37:18 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/02 11:03:29 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,6 @@ int	main(int argc, char *argv[])
 			return (0);
 		ft_fill(&a, str);
 		ft_free(str);
-		if (a != NULL && a->next == NULL)
-			return (ft_lstclear(&a), 0);
-		if (!ft_sorted(&a))
-			return (ft_lstclear(&a), 0);
 		ft_check_gnl(&a, &b);
 		ft_answer(&a, &b);
 	}

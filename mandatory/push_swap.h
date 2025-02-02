@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 21:06:11 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/02/01 20:17:28 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/02 11:24:44 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ void	ft_fill(t_stack **a, char **res);
 void	first_node(t_stack **a, char **res, int data);
 void	ft_rotation_case(t_stack **a, t_stack **b, t_stack *tp);
 void	ft_prepare(t_stack **a, t_stack **b, int mid, int max);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	ft_middle_sort(t_stack **a, t_stack **b);
 void	ft_large_sort(t_stack **a, t_stack **b);
 void	ft_best_case(t_stack **a, t_stack **b);

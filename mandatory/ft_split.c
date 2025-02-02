@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 21:22:55 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/27 18:16:55 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/02 10:28:01 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ static int	free_malloc(char **res, int position, size_t buffer)
 {
 	int	i;
 
+	(void)buffer;
 	i = 0;
 	res[position] = malloc(buffer);
 	if (!res[position])

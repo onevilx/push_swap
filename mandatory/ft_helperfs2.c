@@ -6,7 +6,7 @@
 /*   By: yaboukir <yaboukir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:52:44 by yaboukir          #+#    #+#             */
-/*   Updated: 2025/01/26 23:51:56 by yaboukir         ###   ########.fr       */
+/*   Updated: 2025/02/02 11:24:54 by yaboukir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,25 +75,4 @@ int	ft_get_median(t_stack **a)
 	mid = res[len / 2];
 	free(res);
 	return (mid);
-}
-
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	unsigned char		*p1;
-	unsigned const char	*p2;
-
-	if (!dst && !src)
-		return (0);
-	if (src == dst)
-		return (dst);
-	p1 = (unsigned char *) dst;
-	p2 = (unsigned const char *) src;
-	while (n > 0)
-	{
-		*p1 = *p2;
-		p1++;
-		p2++;
-		n--;
-	}
-	return (dst);
 }
